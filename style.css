@@ -1,0 +1,257 @@
+body {
+      
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+   background-color: white;
+}
+
+/* Header Styles */
+header {
+  background-color:;
+  padding: 20px;
+  text-align: center;
+}
+.anim{
+  animation: anim 10s alternate-reverse;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #007bff; /* Light blue color for the header background */
+  color: white; /* Text color set to white for better contrast */
+  border-bottom: 1px solid #ddd;
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav div {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color:brown; /* Dark green color for navigation links */
+  font-weight:lighter;
+}
+
+nav a:hover {
+  color:blue; /* Light green color on hover */
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color:black; /* Dark green color for section headings */
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+  color:black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Contact Form Styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color:red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color:blue;
+}
+@keyframes anim{
+  from{
+    top:0px;
+  }
+  to{
+    top:100px;
+  }
+}
+#form-message {
+  margin-top: 10px;
+  color: red; /* Light green color for form message */
+  font-weight: bold;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+ /* nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav div {
+    margin: 10px 0;
+  }
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000; /* Ensure it's above other content 
+}*/
+footer {
+  background: #212529;
+}
+@keyframes anim {
+  from { margin-top: 0px; }
+  to { margin-top: 100px; }
+}
+img {
+  animation-name: anim;
+  animation-duration: 30s; /* Adjusted for a more realistic animation duration */
+  border-radius: 10px; /* Added border-radius for rounded corners */
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #007bff; /* Light blue color for the header background */
+  color: white; /* Text color set to white for better contrast */
+  border-bottom: 1px solid #ddd;
+}
+nav {
+  margin-bottom: 20px;
+}
+.navbar-nav .nav-link {
+  color: #007bff;
+  font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+  color: #0056b3;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.chip {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.chip img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#contact-info, #quick-links {
+  margin-top: 20px;
+}
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+#call-to-action {
+  background-color: #e9ecef;
+  padding: 20px;
+  text-align: center;
+}
+#call-to-action .btn {
+  margin-top: 10px;
+}
+#our-programs img, #testimonials img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#contact-form {
+  background-color: lightgrey;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+}
+}

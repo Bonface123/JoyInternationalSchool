@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy International School - Home</title>
+  <style>
+    @keyframes anim {
+      from { margin-top: 0px; }
+      to { margin-top: 100px; }
+    }
+    img {
+      animation-name: anim;
+      animation-duration: 30s; /* Adjusted for a more realistic animation duration */
+      border-radius: 10px; /* Added border-radius for rounded corners */
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #0056b3; /* Light blue color for the header background */
+      color: white; /* Text color set to white for better contrast */
+      border-bottom: 1px solid #ddd;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    .navbar-nav .nav-link {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #0056b3;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 25px;
+      background-color: #f1f1f1;
+      margin: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .chip img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    #contact-info, #quick-links {
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    footer ul li {
+      margin-bottom: 10px;
+    }
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+    #call-to-action {
+      background-color: #e9ecef;
+      padding: 20px;
+      text-align: center;
+    }
+    #call-to-action .btn {
+      margin-top: 10px;
+    }
+    #our-programs img, #testimonials img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    #contact-form {
+      background-color: lightgrey;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #contact-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    #contact-form input, #contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #contact-form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #contact-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <h1>Joy International School</h1> 
+    <p>Home of Excellence</p>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="academics.html">Academics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admissions.html">Admissions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <main>
+      <div class="row">
+        <div class="col">
+          <h2>Welcome to Joy International School</h2>
+          <p>Discover a place where excellence meets innovation, where integrity and respect are at the core of everything we do. Join us in nurturing future leaders and lifelong learners.</p>  
+        </div>
+        <div class="col" id="animation">
+          <img src="assets/images/heroImage.jpeg" height="400" width="600" alt="Hero Image">
+        </div>
+      </div>
+      <div class="row" style="margin-top: 40px;">
+        <div class="col">
+          <img src="assets/images/school.jpg" height="300" width="450" alt="School Image">
+        </div>
+        <div class="col">
+          <section id="why-choose-us">
+            <h3>Why Choose Us</h3>
+            <p>At Joy International School, we provide an environment that fosters academic excellence, promotes diversity, and encourages innovation. Our dedicated staff and comprehensive programs ensure that each student thrives.</p>
+          </section>
+        </div>
+      </div>
+      <div class="container-fluid" style="margin-top: 30px;">
+        <h3>Our Core Values</h3>
+        <div class="row">
+          <div class="col">
+            <div class="chip">
+              <img src="assets/images/excellenceIcon.jpeg" height="40" width="50" alt="Excellence Icon">Excellence
+            </div>
+          </div>
+          <div class="col">
+            <div class="chip">
+              <img src="assets/images/integrity.png" height="40" width="50" alt="Integrity Icon">Integrity
+            </div>
+          </div>
+          <div class="col">
+            <div class="chip">
+              <img src="assets/images/innovation.jpg" height="40" width="50" alt="Innovation Icon">Innovation
+            </div>
+          </div>
+          <div class="col">
+            <div class="chip">
+              <img src="assets/images/diversityIcon.jpg" height="40" width="50" alt="Diversity Icon">Diversity
+            </div>
+          </div>
+          <div class="col">
+            <div class="chip">
+            <img src="assets/images/respect.png" height="40" width="50" alt="Respect Icon">Respect
+          </div>
+        </div>
+      </div>
+      
+      <!-- New Content Section -->
+      <div class="container" style="margin-top: 40px;">
+        <section id="our-programs">
+          <h3>Our Programs</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Early Childhood Education</h4>
+              <img src="earlyChildhood.jpg" alt="Early Childhood">
+              <p>Our early childhood program nurtures young minds and sets the foundation for lifelong learning.</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Primary School</h4>
+              <img src="assets/images/primary School.jpg" alt="Primary School">
+              <p>Our primary school curriculum is designed to foster academic excellence and holistic development.</p>
+            </div>
+            <div class="col-md-4">
+              <h4>High School</h4>
+              <img src="assets/images/high School.jpg" alt="High School">
+              <p>Our high school program prepares students for college and beyond, emphasizing critical thinking and leadership skills.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <div class="container" style="margin-top: 40px;">
+        <section id="testimonials">
+          <h3>Testimonials</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <blockquote>
+                <p>"Joy International School has transformed my child's life. The teachers are dedicated, and the environment is nurturing and inclusive."</p>
+                <footer>- Parent of a Student</footer>
+              </blockquote>
+            </div>
+            <div class="col-md-6">
+              <blockquote>
+                <p>"Attending Joy International School has been the best decision of my academic career. I feel prepared for college and beyond."</p>
+                <footer>- High School Student</footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <div class="container-fluid" style="margin-top: 40px; background-color:#343a40; padding: 20px;">
+        <section id="call-to-action">
+          <h3>Join Us Today</h3>
+          <p>Are you ready to be part of a community that values excellence, integrity, and innovation? Enroll at Joy International School and start your journey towards a bright future.</p>
+          <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="container-fluid" style="background-color:#343a40; margin-top: 20px; padding: 10px;">
+    <div class="row">
+      <div class="col">
+        <section id="contact-info">
+          <h3>Contact Information</h3>
+          <ul>
+            <li>Address: 40200 Nakuru</li>
+            <li>Phone: 0729820689</li>
+            <li>Email: <a href="mailto:joyschoolinternational@gmail.com">joyschoolinternational@gmail.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col">
+        <section id="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <p style="text-align: center;">&copy; Joy School International. All Rights Reserved.</p>
+  </footer>
+  <script src="assets/js/bootstrap.js"></script>
+</body>
+</html>
