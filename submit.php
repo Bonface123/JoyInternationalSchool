@@ -1,53 +1,44 @@
+
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "joy_school";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+// 1. Include PHPMailer using Composer's autoloader (assuming you've installed PHPMailer)
+require 'vendor/autoload.php';
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-    // Gather form data
-    $student_name = $conn->real_escape_string($_POST['student_name']);
-    $dob = $conn->real_escape_string($_POST['dob']);
-    $gender = $conn->real_escape_string($_POST['gender']);
-    $class = $conn->real_escape_string($_POST['class']);
-    $parent_name = $conn->real_escape_string($_POST['parent_name']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $phone = $conn->real_escape_string($_POST['phone']);
-    $address = $conn->real_escape_string($_POST['address']);
-    $message = $conn->real_escape_string($_POST['message']);
+// 2. Create a new PHPMailer instance (optional: enable exceptions)
+$mail = new PHPMailer(true);
 
-    // Insert data into database
-    $sql = "INSERT INTO admissions (student_name, dob, gender, class, parent_name, email, phone, address, message) VALUES ('$student_name', '$dob', '$gender', '$class', '$parent_name', '$email', '$phone', '$address', '$message')";
+// 3. Configure Email Settings (replace with your details)
+$mail->isSMTP();                                            // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';                           // Specify your SMTP server address
+$mail->SMTPAuth = true;                                         // Enable SMTP authentication
+$mail->Username = 'ondusobonface9@gmail.com';                   // Your SMTP username
+$mail->Password = 'uzfa dwmr vezu adkh';                             // Your SMTP password
+//$mail->SMTPSecure = 'ssl';                 // Optional, set encryption if needed
+$mail->Port = 25;                                             // Replace with your SMTP server port (usually 587)
 
-    if ($conn->query($sql) === TRUE) {
-        // Send thank you email
-        $to = $email;
-        $subject = "Thank you for your application";
-        $body = "Dear $student_name,\n\nThank you for applying to Joy International School. We have received your application and will review it shortly.\n\nBest regards,\nJoy International School";
-        $headers = "From: admin@joyinternationalschool.com";
+// 4. Set Sender Detailscomposer install
 
-        mail($to, $subject, $body, $headers);
+$mail->setFrom('ondusobonface9@gmail.com', 'Bonface Onduso');       // Sender's email address and name
 
-        // Redirect back to the admissions page with a success message
-        header("Location: admissions.html?status=success");
-        exit();
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+// 5. Add Recipient(s)
+$mail->addAddress($_POST ["email"]);            // Recipient's email address (can add more with addAddress())
 
-    $conn->close();
+// 6. Set Email Subject and Body
+$mail->Subject = ' "Joy International School Client Inquiry';              // Email subject line
+$mail->Body = 'This is to inform you that some client has made an appointment with you through Onduso Bonface Personal Website.'; // Plain text email body
+$mail->isHTML(true);                                           // Set email format to HTML (optional)
+
+// 7. Optional: Set Alternative Text for Plain Text Clients
+$mail->AltBody = 'This is the plain text version of the email body.'; // Optional for non-HTML clients
+
+// 8. Send the Email and Handle Response
+if ($mail->send()) {
+    echo 'Message has been sent successfully!';
 } else {
-    // If the form is not submitted via POST method, redirect back to the admissions page
-    header("Location: admissions.html");
-    exit();
+    echo 'Error sending message: ' . $mail->ErrorInfo;
 }
-?>
+
